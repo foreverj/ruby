@@ -39,7 +39,7 @@ end
 class Tires
 	attr_reader :status
 	def initialize number
-		throw "The number must be a positive integer" unless number.is_a?(Integer) and number>0
+		throw "The number must be a positive integer" unless number.is_a?(Integer) && number>0
 		@number=number
 		@status="locked"
 	end
