@@ -1,9 +1,8 @@
 # encoding: utf-8
-require_relative "tweetable"
+
 #Classes
 module Blog
 class Post
-	include Tweetable
 	attr_reader :author, :title, :body, :comments
 	def initialize options
 		@author = options[:author]
@@ -23,7 +22,6 @@ class Post
 end
 
 class Comment
-	include Tweetable
 	attr_reader :user, :body
 	def initialize options
 		@user = options[:user]

@@ -1,5 +1,6 @@
 # encodint: utf-8
 require_relative "blog"
+require_relative "tweetable"
 
 post=Blog::Post.new author:"José Mota",
 					title:"A title",
@@ -16,4 +17,6 @@ post=Blog::Post.new author:"José Mota",
 post.insert_random_comment
 post.insert_random_comment
 
-post.comments.each{|c| c.tweet}
+post. extend Tweetable
+
+post.tweet
